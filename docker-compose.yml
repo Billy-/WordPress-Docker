@@ -1,0 +1,12 @@
+version: "2"
+services:
+    lamp: 
+        extends: 
+            file: common.yml
+            service: lamp
+    wp:
+        depends_on:
+            - lamp
+        extends:
+            file: common.yml
+            service: wp

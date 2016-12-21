@@ -1,0 +1,12 @@
+version: "2"
+services:
+    lamp: 
+        build: ./lamp
+        image: lamp
+        command: 'echo'
+    wp:
+        build: ./wp
+        image: wp
+        ports:
+            - '80:80'
+        command: '/run.sh'
