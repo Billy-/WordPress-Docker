@@ -4,9 +4,10 @@ services:
         build: ./lamp
         image: lamp
         command: 'echo'
+    build:
+        build: ./build
+        image: build
     wp:
         build: ./wp
         image: wp
-        ports:
-            - '80:80'
         command: '/run.sh'
