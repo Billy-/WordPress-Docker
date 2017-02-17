@@ -10,6 +10,8 @@ services:
             service: wp
         depends_on:
             - lamp
+        volumes:
+            - ./dist:/var/www/wp-content/themes/dev-theme
         ports:
             - 8080:80
     build:
