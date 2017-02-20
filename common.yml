@@ -1,13 +1,8 @@
 version: "2"
 services:
-    lamp: 
-        build: ./lamp
-        image: lamp
-        command: 'echo'
     build:
         build: ./build
         image: build
     wp:
         build: ./wp
         image: wp
-        command: '/run.sh'

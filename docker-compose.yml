@@ -1,15 +1,9 @@
 version: "2"
 services:
-    lamp: 
-        extends: 
-            file: common.yml
-            service: lamp
     wp:
         extends:
             file: common.yml
             service: wp
-        depends_on:
-            - lamp
         volumes:
             - ./dist:/var/www/wp-content/themes/dev-theme
         ports:
