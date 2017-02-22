@@ -5,6 +5,7 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <h1><?php the_title(); ?></h1>
+        <div id="app"></div>
+    <?php wp_footer(); ?>
     </body>
 </html>

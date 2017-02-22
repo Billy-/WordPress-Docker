@@ -13,6 +13,15 @@ services:
             file: common.yml
             service: build
         volumes:
-            - ./src:/app/src
+            - ./app/src:/app/src
+            - ./app/tests:/app/tests
             - ./dist:/app/dist
         command: npm run watch
+    tests:
+        extends:
+            file: common.yml
+            service: build
+        volumes:
+            - ./app/src:/app/src
+            - ./app/tests:/app/tests
+        command: npm run watchtests
